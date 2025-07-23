@@ -1,3 +1,9 @@
+-- 🔐 Key Access
+local allowedKey = "DA0ZA"
+if getgenv().Key ~= allowedKey then
+    return game.Players.LocalPlayer:Kick("❌ Invalid Key!")
+end
+
 local Players = game:GetService("Players")
 local VirtualInputManager = game:GetService("VirtualInputManager")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
